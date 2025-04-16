@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Geri Bildirim Sonucu</title>
+  <style>
+     
+   
+    nav {
+      background-color: #333;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+    }
+    nav ul li a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+    
+  </style>
+  <script>
+    function getQueryStringValue(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+    
+    window.onload = function() {
+      const name = getQueryStringValue('name');
+      const email = getQueryStringValue('email');
+      const message = getQueryStringValue('message');
+
+      document.getElementById('name').textContent = name ? name : "Adınız bulunamadı";
+      document.getElementById('email').textContent = email ? email : "E-posta bulunamadı";
+      document.getElementById('message').textContent = message ? message : "Mesajınız bulunamadı";
+    };
+  </script>
+</head>
+<body> <nav>
+  <ul>
+    <li><a href="index.html">Ana Sayfa</a></li>
+    <li><a href="form.html">Geri Bildirim</a></li>
+  </ul>
+</nav>
+
+
+  <header>
+    <h1 style="border:2px solid rgb(16, 124, 61);">  Geri Bildirim Sonucu</h1>
+  </header>
+
+
+    <h2>Teşekkürler, Geri Bildiriminizi Aldık!</h2>
+    <p><strong>Adınız:</strong> <span id="name">Yükleniyor...</span></p>
+    <p><strong>E-posta:</strong> <span id="email">Yükleniyor...</span></p>
+    <p><strong>Mesajınız:</strong></p>
+    <p id="message">Yükleniyor...</p>
+ 
+</body>
+</html>
