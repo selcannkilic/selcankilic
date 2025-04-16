@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Geri Bildirim Formu</title>
+  
+  <style>
+ 
+      
+    nav {
+      background-color: #333;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+    }
+    nav ul li a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+    
+    
+  </style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="sayfa1.html">Yapay Zeka Nedir?</a></li>
+          <li><a href="sayfa2.html">Makine Öğrenmesi ve Derin Öğrenme</a></li>
+          <li><a href="sayfa3.html">Kullanım Alanları</a></li>
+          <li><a href="sayfa4.html">Gelecekte Yapay Zeka</a></li>
+          <li><a href="sayfa5.html">Kaynaklar ve Eğitimler</a></li>
+          <li><a href="form.html">Geri Bildirim</a></li>
+        </ul>
+      </nav>
+       
+  <header>
+    <h1 style="border:2px solid rgb(16, 124, 61);"> Geri Bildirim Formu</h1>
+  </header>
+
+ 
+    <h2>Site Hakkındaki Görüş ve Önerileriniz</h2>
+   
+    <form action="sonuc.html" method="GET">
+      <label for="name">Adınız:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mesajınız:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Gönder</button>
+    </form>
+  
+
+  
+</body>
+</html>
