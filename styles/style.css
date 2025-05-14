@@ -1,0 +1,309 @@
+/* Genel Sıfırlama: Tüm öğelerin margin, padding ve box-sizing ayarlarını sıfırla */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sayfa Temel Ayarları: Arka plan ve yazı fontu */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #faf2f2; /* Açık arka plan */
+    color: #000000; /* Siyah yazı rengi */
+}
+
+/* Ana kapsayıcılar: sayfanın tamamını kaplar ve dikey düzen kurar */
+.container, .content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header (üst alan): Arka plan ve yazı rengi ayarlanır */
+header {
+    background-color: #001e6f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigasyon çubuğu: siyah arka plan ve yatay liste */
+nav {
+    background-color: #000;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+nav ul li a:hover {
+    background-color: #4ba9f1; /* Hover rengi */
+    border-radius: 5px;
+}
+
+/* Ana içerik alanı */
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: transparent;
+    padding-bottom: 60px; /* Footer kaplamasın diye */
+}
+
+/* Şehir kutusu örneği */
+.city {
+    background-color: rgb(30, 130, 155);
+    color: rgb(242, 232, 232);
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Görseller: ortalanır ve responsive yapılır */
+img {
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Footer: sabit altta, beyaz yazı ve koyu arka plan */
+footer {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Form: ortalanmış, şık görünüm */
+form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+form label {
+    display: block;
+    margin-top: 10px;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form button {
+    background-color: #4c9eaf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #4588a0;
+}
+
+/* Quiz alanı: kutularla ayrılmış */
+form fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+form legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+form input[type="radio"] {
+    margin-right: 10px;
+}
+#quiz-result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Tablo biçimi */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #5c6567;
+}
+
+/* Mobil uyum: navbar ve footer ayarı */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Gövde yazıları için Roboto fontu */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Başlıklar için Playfair Display fontu */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Bilgi kutusu: gölgeli ve gradyanlı kutu */
+.kutu {
+    background: linear-gradient(135deg, #d0eaff, #e9f6ff);
+    border-left: 6px solid #3399ff;
+    border-radius: 16px;
+    padding: 20px 25px;
+    margin: 20px 0;
+    box-shadow: 0 8px 16px rgba(0, 102, 204, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #003366;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.kutu:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+}
+
+/* Paragraflar: renk ve satır aralığı ayarı */
+p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Uygulama kartları: yan yana kutular */
+.app-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.app-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.app-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.app-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.app-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.app-card p {
+    font-size: 16px;
+}
+
+/* Container: sayfa ortalanmış kutu */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background: #fdfdfd;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.container:hover {
+    transform: scale(1.01);
+}
+
+/* Content: içerik kutusu */
+.content {
+    padding: 20px;
+    border-left: 4px solid #3399ff;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
+    transition: background-color 0.3s;
+}
+.content:hover {
+    background-color: #f0f8ff;
+}
+.content h1, .content h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 12px;
+}
+.content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Başlıklar için özel stil */
+h1:not(header h1) {
+    border: 2px solid rgb(44, 170, 216);
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9fcff;
+    font-family: Arial, sans-serif;
+    color: #2c2c2c;
+}
+
+/* Video kapsayıcı: oran korumalı responsive yapı */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Tam genişlikte görsel (banner gibi) */
+.fullscreen-image {
+    width: 100vw;
+    height: 50vh;
+    display: block;
+}
